@@ -7,6 +7,7 @@ var admin_route = require("./routes/admin.js");
 var accountsroute = require("./routes/accounts");
 var userroute = require("./routes/user");
 var exe = require("./conn.js")
+require("dotenv").config;
 
 
 
@@ -69,6 +70,4 @@ app.use(async (req, res, next) => {
 
 
 // Server
-app.listen(1000, () => {
-  console.log("Server running at http://localhost:1000");
-});
+app.listen(Progress.env.PORT || 1000);
